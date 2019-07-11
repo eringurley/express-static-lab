@@ -12,7 +12,6 @@ fetch(`/api/v1/colors/${color}`)
     header.textContent += color.b + ' ';
     header.style.color += color.name;
 
-
   });
   
 

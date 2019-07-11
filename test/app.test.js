@@ -12,9 +12,9 @@ describe('app routes', () => {
 
   it('returns a color detail page', () => {
     return request(app)
-      .get('/color')
+      .get('/color.html?name=red')
       .then(res => {
-        expect(res.text).toEqual(expect.stringContaining('red'));
+        expect(res.text).toEqual(expect.stringContaining('Color'));
       });
   });
 });
