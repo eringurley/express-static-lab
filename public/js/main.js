@@ -8,7 +8,12 @@ fetch('/api/v1/colors')
       const li = document.createElement('li');
       li.textContent = `${color.name} - ${color.hex} - ${color.r} - ${color.g} - ${color.b}`;
       li.style.color = '#' + color.hex;
-      colorsList.appendChild(li);
+
+      const a = document.createElement('a');
+      a.href = `/color.html?color=${color.name}`;
+      a.appendChild(li);
+      colorsList.appendChild(a);
+
     });
   });
 
